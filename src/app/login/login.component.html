@@ -1,0 +1,10 @@
+
+<main>
+    <section class="container">
+        <form class="form" [formGroup]="form">
+            <input class="form-control" placeholder="insira seu CPF" formControlName="id" (keydown.enter)="select()" (blur)="select()">
+            
+        </form>
+            
+    </section>
+</main>

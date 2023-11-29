@@ -1,0 +1,65 @@
+<main>
+    <header>
+        <h2>Cadastrar usuario</h2>
+    </header>
+    <form>
+        <div class="form content-box">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="{{Getuser.email}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">CPF</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="{{Getuser.cpf}}">
+          </div>
+        </div>
+    
+        <div class="form content-box">
+           
+        <div class="form-group  col-md-6">
+           <label for="inputAddress">Endereço</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Rua Deus é Fiel">
+            </div>
+    
+            <div class="form-group col-md-6" >
+              <label for="inputAddress2">Senha</label>
+              <input type="password" class="form-control" id="inputAddress2" placeholder="">
+            </div>
+        </div>
+    
+        <div class="form-row">
+        
+          <div class="form-group col-md-4">
+            <label for="inputState">Setor</label>
+            <select id="inputState" class="form-control">
+              <option selected>...</option>
+              <option>Administração</option>
+              <option>Tecnologia da Informação</option>
+              <option>Limpesa</option>
+              <option>Recusros Humanos</option>
+              <option>Pesquisa e Desenvolvimento</option>
+              <option>Jurídico</option>
+              <option>Compras</option>
+              <option>Atendimento ao Cliente</option>
+              <option>Finanças</option>
+            </select>
+          </div>
+    
+    
+          <div class="form-group col-md-2">
+            <label for="inputZip">Numero</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+             Admin
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+</main>

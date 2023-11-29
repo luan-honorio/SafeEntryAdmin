@@ -1,0 +1,53 @@
+
+    <main *ngIf="dados.admin == true"  class="fundo">
+
+        <div class="barr">
+    <section  class="image">
+        <img src="../../assets/logo.png" height="160" width="160" >
+       
+        <div class="info">
+            <p>{{menbers.length}}</p>
+        <p class="h4">funcionarios</p>
+        </div>
+    </section>
+    </div>
+    
+    
+      <section class="box">
+        
+        <div *ngFor="let user of menbers" class="container m-2 ">
+            
+            <p class="box-cont-id">
+                {{user?.id}}
+            </p>
+            <p class="box-cont">
+                {{user?.nome}}
+            </p>
+            <p class="box-cont">
+               {{user?.email}}
+            </p>
+            <p class="box-cont">
+                {{user?.admin? 'Sim': 'Não'}}
+            </p>
+    
+            <div class="">
+                <img class="m-2" src="../../assets/ferramenta-lapis.png" width="20" height="20" (click)="edit(user.id, user)">
+                <img class="m-2" src="../../assets/lata-de-lixo.png"  width="20" height="20" (click)="delet(user.id)">   
+            </div>
+        </div>
+
+      </section>
+    
+     
+    </main>
+    
+
+
+
+   
+    
+    <main *ngIf="dados == null">
+    <p>
+        null
+    </p>
+    </main>
