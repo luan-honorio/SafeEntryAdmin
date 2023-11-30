@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GeralService } from '../geral.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,15 +17,27 @@ export class CadastroComponent {
     senha : new FormControl(),
     setor : new FormControl(),
     contato : new FormControl(),
-    dataContrato :new FormControl(),
     cpf : new FormControl(),
     admin :new FormControl(),
-    createdAt : new FormControl(),
-    updatedAt : new FormControl(),
+    DataContrato :new FormControl(),
+ 
   })
   constructor(public service : GeralService){}
 
-  
+  datA(){
+    if(this.form.value.setor == "Administração"){
+      this.form.value.admin = true
+    }else{
+      this.form.value.admin = false
+    }
+    this.service.postUsers(this.form.value).subscribe(res =>{
+      console.log(res);
+    },(err)=>{
+      console.log(err);
+    })
+
+
+  }
 
 
 }

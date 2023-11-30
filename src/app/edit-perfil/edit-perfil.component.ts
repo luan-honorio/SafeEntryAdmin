@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { GeralService } from '../geral.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-perfil',
@@ -8,13 +10,43 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditPerfilComponent implements OnInit {
   
-  Getuser : any ;
-constructor(public reactive : ActivatedRoute){}
+  Getuser : any 
+
+  form = new FormGroup({
+    nome : new FormControl('',[Validators.required]), 
+    sobrenome : new FormControl(),
+    email : new FormControl('', [Validators.required]),
+    senha : new FormControl(),
+    setor : new FormControl(),
+    contato : new FormControl(),
+    cpf : new FormControl(),
+    admin :new FormControl(),
+    DataContrato :new FormControl(),
+ 
+  })
+constructor(public reactive : ActivatedRoute, public service : GeralService, public router : Router){}
   ngOnInit(): void {
     this.Getuser = JSON.parse(this.reactive.snapshot.paramMap.get('menbro') as string);
-    console.log(this.Getuser)
+    
 
   }
+
+    updateUser(id : number){
+      if(this.form.value.setor == "Administração"){
+        this.form.value.admin = true
+      }else{
+        this.form.value.admin = false
+      }
+          this.service.updateUsers(id , this.form.value).subscribe(res =>{
+            
+            this.router.navigate(['\deach']);
+            
+          },(Error)=>{
+            alert("Erro ao Atualizar")
+          })
+
+    }
+
 
 
 }

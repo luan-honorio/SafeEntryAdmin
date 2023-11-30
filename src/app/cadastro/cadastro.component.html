@@ -13,17 +13,17 @@
   
   
         <section class="Cad">
-          <form class="form">
+          <form class="form" [formGroup]="form">
   
   
               <div class="conts">
                   <div class="itens">
                     <label for="">Nome</label>
-                    <input class="form-control" placeholder="Email">
+                    <input class="form-control" placeholder="nome" formControlName="nome">
                   </div>
                   <div class="itens">
                     <label for="">Sobrenome</label>
-                    <input class="form-control" placeholder="Sobrenome" type="password">
+                    <input class="form-control" placeholder="Sobrenome" type="text" formControlName="sobrenome">
                   </div>
               <div>
   
@@ -35,10 +35,10 @@
                <div class="conts">
                     <div class="itens">
                       <label for="">Email</label>
-                      <input class="form-control" placeholder="Email">
+                      <input class="form-control" placeholder="Email" formControlName="email">
                     
                       <label for="">Senha</label>
-                      <input class="form-control" placeholder="Senha" type="password">
+                      <input class="form-control" placeholder="Senha" type="password" formControlName="senha">
                      </div>
                 <div>
   
@@ -49,7 +49,7 @@
               <div class="conts">
                 <div class="form-group itens ">
                   <label for="inputState">Setor</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" class="form-control" formControlName="setor">
                     <option selected>...</option>
                     <option>Administração</option>
                     <option>Tecnologia da Informação</option>
@@ -65,22 +65,22 @@
             
                <div class="itens">
                 <label for="">Contato</label>
-                <input class="form-control" placeholder="ex: (82) 9 98999-9999" type="tel">
+                <input class="form-control" placeholder="ex: (82) 9 98999-9999" type="tel" formControlName="contato">
             </div>
            
             </div>
             <div class="conts">
               <div class="itens">
                 <label for="">Emissão do contrato</label>
-                <input class="form-control"  type="date">
+                <input class="form-control"  type="date" formControlName="DataContrato">
               </div>
               <div class="itens">
                   <label for="">CPF</label>
-                  <input class="form-control"  type="text">
+                  <input class="form-control"  type="text" formControlName="cpf">
               </div>
             </div>
   
-                <button class="btn btn-dark">
+                <button class="btn btn-dark" (click)="datA()">
                   Registrar
                 </button>
           </form>

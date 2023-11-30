@@ -23,7 +23,10 @@ export class GeralService {
   }
 
   postUsers(body : any): Observable<any>{
-    return this.http.post("", body);
+    return this.http.post("http://localhost:4000/user/", body);
   }
+  updateUsers(id : number,body : any): Observable<any>{
+    return this.http.put(`http://localhost:4000/user/update/${id}`, body);
 
+  }
 }
