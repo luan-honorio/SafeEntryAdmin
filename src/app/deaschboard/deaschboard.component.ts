@@ -32,7 +32,7 @@ export class DeaschboardComponent implements OnInit {
 
 
 
-  edit(id : number, menbro : any){
+  edit(menbro : any){
    
     this.router.navigate(['/edit', {  menbro : JSON.stringify(menbro)}])
   }
@@ -48,4 +48,9 @@ export class DeaschboardComponent implements OnInit {
          console.log(err);
     });
   }
+
+
+  adicionar(){
+    this.router.navigate(['\adicioanar'])
+    }
 }

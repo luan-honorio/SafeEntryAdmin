@@ -11,6 +11,7 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
     LoginComponent,
     SplashScreenComponent,
     DeaschboardComponent,
-    EditPerfilComponent
+    EditPerfilComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,65 +1,94 @@
-<main>
-    <header>
-        <h2>Cadastrar usuario</h2>
-    </header>
-    <form>
-        <div class="form content-box">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="{{Getuser.email}}">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">CPF</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="{{Getuser.cpf}}">
-          </div>
+
+
+<section>
+  <div class="con">
+
+
+    <div class="conteudo">
+     
+      <section class="logo">
+        <img src="../../assets/logo.png" height="350" width="350">
+      </section>
+
+
+
+      <section class="Cad">
+        <form class="form">
+
+
+            <div class="conts">
+                <div class="itens">
+                  <label for="">Nome</label>
+                  <input class="form-control" value="{{Getuser.nome}}">
+                </div>
+                <div class="itens">
+                  <label for="">Sobrenome</label>
+                  <input class="form-control" placeholder="Sobrenome" type="password">
+                </div>
+            <div>
+
         </div>
-    
-        <div class="form content-box">
+
+     
+      </div>
+
+             <div class="conts">
+                  <div class="itens">
+                    <label for="">Email</label>
+                    <input class="form-control" value="{{Getuser.email}}">
+                  
+                    <label for="">Senha</label>
+                    <input class="form-control" placeholder="Senha" type="password" >
+                   </div>
+              <div>
+
+              </div>
+
            
-        <div class="form-group  col-md-6">
-           <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Rua Deus é Fiel">
             </div>
-    
-            <div class="form-group col-md-6" >
-              <label for="inputAddress2">Senha</label>
-              <input type="password" class="form-control" id="inputAddress2" placeholder="">
+            <div class="conts">
+              <div class="form-group itens ">
+                <label for="inputState">Setor</label>
+                <select id="inputState" class="form-control">
+                  <option selected>...</option>
+                  <option>Administração</option>
+                  <option>Tecnologia da Informação</option>
+                  <option>Limpesa</option>
+                  <option>Recusros Humanos</option>
+                  <option>Pesquisa e Desenvolvimento</option>
+                  <option>Jurídico</option>
+                  <option>Compras</option>
+                  <option>Atendimento ao Cliente</option>
+                  <option>Finanças</option>
+                </select>
+             </div>
+          
+             <div class="itens">
+              <label for="">Contato</label>
+              <input class="form-control" placeholder="ex: (82) 9 98999-9999" type="tel">
+          </div>
+         
+          </div>
+          <div class="conts">
+            <div class="itens">
+              <label for="">Emissão do contrato</label>
+              <input class="form-control"  type="date">
             </div>
-        </div>
-    
-        <div class="form-row">
-        
-          <div class="form-group col-md-4">
-            <label for="inputState">Setor</label>
-            <select id="inputState" class="form-control">
-              <option selected>...</option>
-              <option>Administração</option>
-              <option>Tecnologia da Informação</option>
-              <option>Limpesa</option>
-              <option>Recusros Humanos</option>
-              <option>Pesquisa e Desenvolvimento</option>
-              <option>Jurídico</option>
-              <option>Compras</option>
-              <option>Atendimento ao Cliente</option>
-              <option>Finanças</option>
-            </select>
+            <div class="itens">
+                <label for="">CPF</label>
+                <input class="form-control" value="{{Getuser.cpf}}"  type="text">
+            </div>
           </div>
-    
-    
-          <div class="form-group col-md-2">
-            <label for="inputZip">Numero</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-        </div>
-    
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-             Admin
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-      </form>
-</main>
+
+              <button class="btn btn-dark">
+                Registrar
+              </button>
+        </form>
+      </section>
+
+
+    </div>
+  </div>
+
+
+</section>

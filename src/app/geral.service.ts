@@ -22,4 +22,8 @@ export class GeralService {
     return this.http.delete(`http://localhost:4000/user/delete/${id}`)
   }
 
+  postUsers(body : any): Observable<any>{
+    return this.http.post("", body);
+  }
+
 }

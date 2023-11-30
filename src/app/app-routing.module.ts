@@ -5,6 +5,7 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { DeaschboardComponent } from './deaschboard/deaschboard.component';
 import { combineLatest } from 'rxjs';
 import { EditPerfilComponent } from './edit-perfil/edit-perfil.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ component : EditPerfilComponent
     path : "",
     pathMatch : 'full',
     component : SplashScreenComponent
+  },
+  {
+    path : '\adicioanar',
+    component : CadastroComponent
   }
 ];
 

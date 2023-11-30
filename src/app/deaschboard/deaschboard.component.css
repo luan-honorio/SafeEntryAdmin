@@ -11,20 +11,32 @@
     justify-content: center;
     flex-direction: column;
     width: 76%;
+    height: 95%;
     margin: auto;
    background-color:rgb(236, 231, 231) ;
 }
-
-.container{
+.conteudo{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    
+}
+.cont{
 
     background-color: white;
     padding: 10px;
     display: flex;
+    height: 10%;
+   
     justify-content: space-around;
-    width: 100%;
+    width: 98%;
 }
 .box-cont{
-    width: 240px;
+    width: 35%;
+    background-color: #2F69EE;
     height: 50px;
     display: flex;
     align-items: center;
@@ -32,7 +44,7 @@
 }
 
 .box-cont-id{
-    width: 80px;
+    width: 10%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -67,4 +79,9 @@ border-bottom-right-radius: 35px;
     border-radius: 20px;
     margin: 1rem;
 
+}
+.add{
+    position: relative;
+    left: 40%;
+    bottom: 5%;
 }
