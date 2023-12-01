@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GeralService } from '../geral.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-edit-perfil',
@@ -22,6 +23,7 @@ export class EditPerfilComponent implements OnInit {
     cpf : new FormControl(),
     admin :new FormControl(),
     DataContrato :new FormControl(),
+    updatedAt : new FormControl(),
  
   })
 constructor(public reactive : ActivatedRoute, public service : GeralService, public router : Router){}
@@ -32,6 +34,7 @@ constructor(public reactive : ActivatedRoute, public service : GeralService, pub
   }
 
     updateUser(id : number){
+      this.form.value.updatedAt = new Date();
       if(this.form.value.setor == "Administração"){
         this.form.value.admin = true
       }else{

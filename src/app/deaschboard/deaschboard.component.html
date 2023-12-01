@@ -1,6 +1,5 @@
 
     <main *ngIf="dados.admin == true"  class="fundo">
-
         <div class="barr">
     <section  class="image">
         <img src="../../assets/logo.png" height="160" width="160" >
@@ -16,21 +15,44 @@
       <section class="box">
       <div class="conteudo">
         <div></div>
-        <div  *ngFor="let user of menbers" class="cont">
-            <p>{{user.id}}</p>
-            <p>{{user.nome}}</p>
-            <p>{{user.email}}</p>
-            <p>{{user.cpf}}</p>
-         
-    
-            <div class="">
-                <img class="m-2" src="../../assets/ferramenta-lapis.png" width="20" height="20" (click)="edit(user)" >
-                <img class="m-2" src="../../assets/lata-de-lixo.png"  width="20" height="20" (click)="delet(user.id)">   
-            </div>
+        <div class="cont">
+           
+<table>
+    <tr>
+      <th>NOME</th>
+      <th>EMAIL</th>
+      <th>CPF</th>
+      <th>SETRO</th>
+      <th>CONTATO</th>
+      <th>Contratação</th>
+      <th>ADMIN</th>
+      <th>CREATED.AT</th>
+      <th>UPDATED.AT</th>
+      <th>OPITIONS</th>
+    </tr>
+    <tr *ngFor="let user of menbers" >
+      <td>{{user?.nome}} {{user?.sobrenome}}</td>
+      <td>{{user?.email}}</td>
+      <td>{{user?.cpf}}</td>
+      <td>{{user?.setor}}</td>
+      <td>{{user?.contato}}</td>
+      <td>{{user?.DataContrato}}</td>
+      <td>{{user.admin? 'SIM': 'NÃO' }}</td>
+      <td>{{user.createdAt}}</td>
+      <td>{{user.updatedAt}}</td>
+        <td>
+            <img src="../../assets/ferramenta-lapis.png" height="20"  alt="" (click)="edit(user)">
+            <img src="../../assets/lata-de-lixo.png" height="20" alt="" (click)="delet(user.id)">
+        </td>
+
+    </tr>
+   
+  </table>
+  
         </div>
     </div>
 
-       <img class="add" src="../../assets/comment-plus.svg" (click)="adicionar()">
+       <img class="add" src="../../assets/comment-plus.svg" (click)="adicinar()">
       </section>
     
      

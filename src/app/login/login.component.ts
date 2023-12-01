@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       const log = this.user; 
 
       
-          this.router.navigate(['/deach' , {log  : JSON.stringify(this.user)}])
+          this.router.navigate(['/deach'])
       
     })
   

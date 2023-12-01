@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GeralService } from '../geral.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { VirtualTimeScheduler } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit{
+  Admin : any;
+  adminOBJ : any;
 
-  form = new FormGroup({
+    form = new FormGroup({
     nome : new FormControl('',[Validators.required]), 
     sobrenome : new FormControl(),
     email : new FormControl('', [Validators.required]),
@@ -22,7 +25,13 @@ export class CadastroComponent {
     DataContrato :new FormControl(),
  
   })
-  constructor(public service : GeralService){}
+  constructor(public service : GeralService, public router : Router){}
+  ngOnInit(): void {
+    this.Admin = sessionStorage.getItem('user'); 
+    
+  }
+
+
 
   datA(){
     if(this.form.value.setor == "Administração"){
@@ -31,9 +40,9 @@ export class CadastroComponent {
       this.form.value.admin = false
     }
     this.service.postUsers(this.form.value).subscribe(res =>{
-      console.log(res);
+      this.router.navigate(['/deach', {'log' : JSON.parse(this.Admin)}])
     },(err)=>{
-      console.log(err);
+      alert("erro ao Registrar menbro")
     })
 
 

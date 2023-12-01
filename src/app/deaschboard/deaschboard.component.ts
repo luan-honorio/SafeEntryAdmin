@@ -17,8 +17,9 @@ export class DeaschboardComponent implements OnInit {
  
   ngOnInit(): void {
 
-    this.usuario = JSON.parse(this.reactive.snapshot.paramMap.get('log') as string)
-    this.dados = JSON.parse(this.usuario)
+    this.dados = JSON.parse(sessionStorage.getItem('user') as string)
+
+   
     this.GetallUsers();
   }
 
@@ -49,8 +50,7 @@ export class DeaschboardComponent implements OnInit {
     });
   }
 
-
-  adicionar(){
+  adicinar(){
     this.router.navigate(['\adicioanar'])
-    }
+  }
 }
