@@ -8,18 +8,23 @@
             <p>{{menbers.length}}</p>
         <p class="h4">funcionarios</p>
        
-        </div>
+      </div>
+      <div class="user">
+        <p>{{dados.nome}} {{dados.sobrenome}}</p>
+      </div>
+      <div class="SAIR">
+        <img src="../../assets/corner-down-left.svg" height="55" width="55" (click)="bak">
+      </div>
     </section>
-    </div>
-    
-    
-      <section class="box">
-      <div class="conteudo">
-        <div></div>
-        <div class="cont">
+  </div>
+  
+  
+  <section class="box">
+    <div class="conteudo">
+      <div class="cont">
            
-<table>
-    <tr>
+        <table>
+          <tr>
       <th>NOME</th>
       <th>EMAIL</th>
       <th>CPF</th>
@@ -27,8 +32,6 @@
       <th>CONTATO</th>
       <th>Contratação</th>
       <th>ADMIN</th>
-      <th>CREATED.AT</th>
-      <th>UPDATED.AT</th>
       <th>OPITIONS</th>
     </tr>
     <tr *ngFor="let user of menbers" >
@@ -39,24 +42,27 @@
       <td>{{user?.contato}}</td>
       <td>{{user?.DataContrato}}</td>
       <td>{{user.admin? 'SIM': 'NÃO' }}</td>
-      <td>{{user.createdAt}}</td>
-      <td>{{user.updatedAt}}</td>
         <td>
             <img src="../../assets/ferramenta-lapis.png" height="20"  alt="" (click)="edit(user)">
             <img src="../../assets/lata-de-lixo.png" height="20" alt="" (click)="delet(user.id)">
-        </td>
-
-    </tr>
-   
-  </table>
-  
-        </div>
+          </td>
+          
+        </tr>
+        
+      </table>
+      
     </div>
+    <div class="ops">
+        <p>
+          <img src="../../assets/comment-plus.svg" (click)="adicinar()">
+        </p>
+    </div>
+  </div>
 
-       <img class="add" src="../../assets/comment-plus.svg" (click)="adicinar()">
-      </section>
-    
-     
+  
+</section>
+
+
     </main>
     
 

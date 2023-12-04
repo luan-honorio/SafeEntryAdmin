@@ -53,4 +53,10 @@ export class DeaschboardComponent implements OnInit {
   adicinar(){
     this.router.navigate(['\adicioanar'])
   }
-}
+  bak(){
+    this.router.navigate(['\login'])
+  }
+
+} 
+
+
